@@ -1,0 +1,54 @@
+.box{
+    display: inline-block;
+    justify-content: center;  
+}
+
+.box-perso{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border-color: rgba(21, 0, 255, 0.536);
+    border-style: solid ;
+    border-radius: 3%;
+    border-width: 10px ;
+    padding: 3px;
+    float: left;
+    min-height: 390px;
+    background-color: rgba(132, 0, 255, 0.57);
+    max-width: 300px;
+}
+
+.break{
+    float: unset;
+    display: unset;
+}
+
+img{
+    width: 300px;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* copié du site */
+
+.clicker {
+    outline:none;
+    cursor:pointer;
+}
+    
+.hiddendiv{
+    display:none;
+    height:200px;
+}
+    
+.clicker:hover + .hiddendiv{
+    display:block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

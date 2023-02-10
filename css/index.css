@@ -1,0 +1,25 @@
+h1{
+    display: flex;
+    padding: 0 0 0 42%;
+}
+
+span{
+    font-weight: bold;
+    color: rgb(0, 0, 196);
+}
+
+.possibilité{
+    font-weight: bold;
+    color:black;
+}
+
+header{
+    text-align: center;
+}
+
+object{
+    position: static;
+    border:3px solid black;
+    padding: 100px;
+}
+
