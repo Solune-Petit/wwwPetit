@@ -2,6 +2,13 @@ html{
 	font-family: Arial;
 }
 
+li{
+	padding: 30px;
+	margin: 0;
+	width: auto ;
+	float: left;
+}
+
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
@@ -343,4 +350,11 @@ a{
 .center{
     text-align: center;
     justify-content: space-evenly;
+}
+
+/* pour interface */
+
+.liInterface{
+  float: unset;
+  padding: 0;
 }
