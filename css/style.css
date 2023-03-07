@@ -1,82 +1,131 @@
-.navbar-nav>li {
-	float: left;
-	margin: unset;
-	
+html{
+	font-family: Arial;
 }
 
-.navbar-default .navbar-nav>li>a {
-	color: #000000;
-	letter-spacing: 1px;
-	text-transform: capitalize;
-	padding: 15px 13px;
-	font-weight: 400;
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
 }
 
-.navbar-default .navbar-nav>li>a.active {
-	color: #f61000;
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  color: #ff0000;
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
 }
 
-@media(max-width:767px) {
-	.navbar-collapse.in {
-		overflow-y: hidden;
-		width: 100%;
-	}
-	.navbar-default .navbar-brand {
-		margin-top: 27px;
-	}
-	.navbar-header {
-		margin: 0px;
-	}
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background-color: rgba(255, 253, 253, 0.42);
-	}
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #93c83f;
-	}
-	.navbar-default .navbar-toggle {
-		border-color: #93c83f;
-	}
-	.navbar-toggle {
-		position: relative;
-		float: right;
-		padding: 9px 10px;
-		margin-top: 20px;
-		margin-right: 50px;
-		margin-bottom: 0px;
-		background-color: transparent;
-		background-image: none;
-		border: 1px solid transparent;
-		border-radius: 4px;
-	}
-	.navbar-default .navbar-collapse,
-	.navbar-default .navbar-form {
-		margin-top: 0em;
-		margin-left: 0;
-		float: none;
-	}
-	nav#nav-effect ul li {
-		padding: 9px 7px;
-		width: 100%;
-		text-align: center;
-	}
-	.navbar-default .navbar-collapse,
-	.navbar-default .navbar-form {
-		border-color: transparent;
-	}
-	
-	.navbar-nav>li {
-		float: none;
-		display: block;
-		text-align: center;
-		margin: 0px 0px;
-	}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+
+.nav > li {
+  position: relative;
+  display: block;
+}
+
+@media (min-width: 880px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+@media (min-width: 880px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
     padding: 5px 15px 5px 25px;
@@ -88,15 +137,36 @@
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #000000;
-    display: inline-block;
-    position: relative;
-    padding: .5em 0;
 }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus { 
-    background:none;
+/* FIN IMPORTANT */
+
+/* IMPORTANT POUR MOI */
+/* .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+} */
+
+@media (min-width: 880px) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    margin-left: 20%;
+    margin-right: 20%;
+    /* width: 60%; */
+    /* border: 3px solid green; */
+  }
+  .navbar-right ~ .navbar-right {
+    margin-right: 0;
+  }
 }
+
+li{
+	padding: 0;
+	margin: 0;
+	width: auto ;
+	float: left;
 }
 
 /* mon code */
@@ -124,6 +194,7 @@ main{
 button:hover{
     transition-property: initial;
     background-color: rgb(0, 0, 255);
+	font-style: bold;
 }
 
 h1{
@@ -159,11 +230,120 @@ body{
 	margin: 0;
 }
 
-li{
+/* li{
 	padding-right: 30px;
-}
+} */
 
 /* pas d'uttillité. juste là pour les points */
 #fdjs{
 	font-style: bold;
+}
+
+/* de index.css */
+
+h1{
+    display: flex;
+    padding: 0 0 0 42%;
+}
+
+span{
+    font-weight: bold;
+    color: rgb(0, 0, 196);
+}
+
+.possibilité{
+    font-weight: bold;
+    color:black;
+}
+
+header{
+    text-align: center;
+}
+
+object{
+    position: static;
+    border:3px solid black;
+    padding: 100px;
+}
+
+/* depuis personnages.css */
+
+.box{
+    display: inline-block;
+    justify-content: center;  
+}
+
+.box-perso{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border-color: rgba(21, 0, 255, 0.536);
+    border-style: solid ;
+    border-radius: 3%;
+    border-width: 10px ;
+    padding: 3px;
+    float: left;
+    min-height: 390px;
+    background-color: rgba(132, 0, 255, 0.57);
+    max-width: 300px;
+}
+
+.break{
+    float: unset;
+    display: unset;
+}
+
+img{
+    width: 300px;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* copié du site */
+
+.clicker {
+    outline:none;
+    cursor:pointer;
+}
+    
+.hiddendiv{
+    display:none;
+    height:200px;
+}
+    
+.clicker:hover + .hiddendiv{
+    display:block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* de sousPersos.css */
+
+.box-perso{
+    border-color: rgba(21, 0, 255, 0.536);
+    border-style: solid ;
+    border-radius: 3%;
+    border-width: 10px ;
+    padding: 3px;
+    float: left;
+    background-color: rgba(132, 0, 255, 0.57);
+    margin: 0 20px 0 20px;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.box{
+    display: inline-block;
+    justify-content: space-evenly;  
+}
+
+.center{
+    text-align: center;
+    justify-content: space-evenly;
 }
