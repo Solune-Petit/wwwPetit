@@ -77,17 +77,17 @@
 		text-align: center;
 		margin: 0px 0px;
 	}
-	.navbar-nav,
-	.header-top {
-		padding-right: 0em;
-		margin-top: 0em;
-	}
-	.navbar-default .navbar-nav>li>a {
-		display: inline-block;
-	}
-	ul.dropdown-menu {
-    text-align: center;
-}
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #000000;
     display: inline-block;
