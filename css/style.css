@@ -1,9 +1,9 @@
 html{
-	font-family: Arial;
+	font-family: cursive;
 }
 
 li{
-	padding: 30px;
+	padding: 25px;
 	margin: 0;
 	width: auto ;
 	float: left;
@@ -148,11 +148,11 @@ li{
 /* FIN IMPORTANT */
 
 /* IMPORTANT POUR MOI */
-/* .nav > li > a {
+.nav > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
-} */
+}
 
 @media (min-width: 880px) {
   .navbar-left {
@@ -167,13 +167,6 @@ li{
   .navbar-right ~ .navbar-right {
     margin-right: 0;
   }
-}
-
-li{
-	padding: 30px;
-	margin: 0;
-	width: auto ;
-	float: left;
 }
 
 /* mon code */
@@ -230,11 +223,21 @@ a{
 footer{
 	background-color: #000000;
 	min-height: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 body{
 	padding: 0;
 	margin: 0;
+  background-color: transparent;
+}
+
+.title{
+  display: unset;
+  padding: 0;
+  margin: 0;
+  float: none;
 }
 
 
