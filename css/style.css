@@ -2,11 +2,13 @@ html{
 	font-family: cursive;
 }
 
+.active{
+  color: blueviolet;
+}
+
 li{
-	padding: 25px;
 	margin: 0;
 	width: auto ;
-	float: left;
 }
 
 .dropdown-menu > li > a {
@@ -230,7 +232,7 @@ footer{
 body{
 	padding: 0;
 	margin: 0;
-  background-color: transparent;
+  background-color: black;
 }
 
 .title{
